@@ -13,30 +13,60 @@
     
     <!--BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="estilo.css">
+
+    <script src="prompt.js" defer></script>
+
     <title>Luiz Portfólio</title>
 </head>
 <body>
     <header>
         <div class="interface">
             <div class="logo">
-                <a href=#">
+                <a href="#">
                     <img src="./assets/luizlogo.png.png" alt="logo do Luiz">
                 </a>
             </div><!--logo-->
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Especialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#especialidade">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projeto">Projetos</a></li>
                 </ul>
             </nav>
             <div class="lz-contato">
-                <a href="#">
+                <a href="#contato">
                     <Button>Contato</Button>
                 </a>
-            </div>
+            </div><!--LZ-contato-->
+
+
+            <div class="lz-abrir-menu" id="lz-abrir-menu">
+                <i class="bi bi-list-nested"></i>
+            </div><!--lz-abrir-menu-->
+
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="lz-fechar" id="lz-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div><!--lz-fechar-->
+
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#especialidade">ESPECIALIDADES</a></li>
+                        <li><a href="sobre">SOBRE</a></li>
+                        <li><a href="#projeto">PROJETOS</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                    </ul>
+                </nav><!--menu-->
+
+            </div><!--menu-mobile-->
+
+            <div class="overlay-menu">
+
+            </div><!--overlay-menu-->
 
         </div><!--Interface-->
     </header>
@@ -45,7 +75,7 @@
         <section class="topo-do-site">
             <div class="interface">
                 <div class="flex">
-                    <div class="txt-topo-site">
+                    <div class="txt-topo-site" id="topo-dosite">
                         <h1>Transformando Conceitos em Soluções Digitais<span>.</span></h1>
 
                         <p>A programação é minha ferramenta para transformar ideias em soluções criativas e funcionais. Busco constantemente aprender novas linguagens e técnicas para criar experiências digitais que simplifiquem o cotidiano e tragam valor real aos usuários. Com foco em design e usabilidade, meu objetivo é sempre unir inovação e praticidade, tornando conceitos em realidade digital de maneira eficiente e impactante.
@@ -53,7 +83,7 @@
                         </p>
 
                         <div class="lz-contato">
-                            <a href="#">
+                            <a href="#contato">
                                 <button>Entrar em contato</button>
                             </a>
                         </div>
@@ -65,7 +95,7 @@
             </div><!--Interface-->
         </section><!--topo-do-site-->
 
-        <section class="especialidades">
+        <section class="especialidades" id="especialidade">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
@@ -76,7 +106,7 @@
                                                 
                     </div><!--especialidades-box-->
                     <div class="especialidades-box">
-                        <i class="bi bi-phone-flip"></i>>
+                        <i class="bi bi-phone-flip"></i>
                         <h3>Responsividade e Design Adaptativo.</h3>
                         <p>Busco sempre garantir que meus sites funcionem bem em diferentes dispositivos, com um design que se adapta automaticamente, oferecendo uma experiência de navegação confortável tanto em desktops quanto em celulares.</p>
                                                 
@@ -85,13 +115,13 @@
                         <i class="bi bi-speedometer"></i>
                         <h3>Performance e Otimização.</h3>
                         <p>Ainda estou aperfeiçoando minhas habilidades para otimizar sites, mas já aprendi a aplicar boas práticas para garantir tempos de carregamento mais rápidos e uma navegação eficiente.</p>
-                                <div class="extra-space"></div>                
+               
                     </div><!--especialidades-box-->
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--especialidade-->
 
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
@@ -106,11 +136,13 @@
                             <a href="https://www.instagram.com/desativadojjwss___/" target="_blank" >
                                 <button><i class="bi bi-instagram"></i></button>
                             </a>
-                            <a href="www.linkedin.com/in/luiz-henrique-4a1692318" target="_blank">
+
+                            <a href="https://www.linkedin.com/in/luiz-henrique-4a1692318" target="_blank">
                                 <button><i class="bi bi-linkedin"></i></button>
                             </a>
+
                             <a href="#">
-                                <button><i class="bi bi-github"></i></button>
+                             <button><i class="bi bi-github"></i></button>
                             </a>
                         </div><!--lz-social-->
                     </div><!--txt-sobre-->
@@ -118,7 +150,7 @@
             </div><!--interface-->
         </section><!--sobre-->
 
-        <section class="portfolio">
+        <section class="portfolio" id="projeto">
             <div class="interface">
                 <h2 class="titulo-port">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
@@ -139,6 +171,57 @@
                 </div><!--Flex-->
             </div><!--Interface-->
         </section><!--Portfolio-->
+
+        <section class="formulario" id="contato">
+            <div class="interface">
+                <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+                <div class="flex">
+                    <form method="post" action="./prompt.php">
+                        <input class="input" type="text" id="Nome" name="nome" placeholder="Seu Nome Completo:" required autocomplete="off" autocapitalize="on">
+
+                        <input class="input" name="e-mail" type="text" id="e-mail" placeholder="Seu e-mail:" required autocomplete="off">
+
+                        <inpu class="input"t type="text" name="number" id="number"  placeholder="Seu Celular:" required 
+                        autocomplete="off">
+
+                        <textarea name="text-box" id="text-box" placeholder="Sua Mensagem" required autocomplete="off"></textarea>
+
+                    <div class="lz-enviar">
+                        <input type="submit" value="ENVIAR">
+                    </div>
+                    </form>
+                    
+                </div><!--flex--
+            </div><!--interface-->
+        </section><!--formulario-->
     </main>
+
+    <footer>
+        <div class="interface">
+                    <div class="line-footer">
+                        <div class="flex">
+                            <div class="logo-footer">
+                            <img src="assets/luizlogo.png.png" alt="LOGOTIPO LUIZ HENRIQUE">
+                            </div><!--logo-footer-->
+                                <div class="lz-social">
+                                    <a href="https://www.instagram.com/desativadojjwss___/" target="_blank" >
+                                        <button><i class="bi bi-instagram"></i></button>
+                                    </a>
+                                    <a href="www.linkedin.com/in/luiz-henrique-4a1692318" target="_blank">
+                                        <button><i class="bi bi-linkedin"></i></button>
+                                    <a href="#">
+                                     <button><i class="bi bi-github"></i></button>
+                                    </a>
+                                    </a>
+                                </div><!--lz-social-->
+                        </div><!--FLEX-->
+                    </div><!--line-footer-->
+
+                    <div class="line-footer borda">
+                        <p><i class="bi bi-mailbox"></i><a href="mailto:luizhenrique1212@gmail.com">luizhenrique1212@gmail.com</a></p>
+                    </div><!--line-footer--
+
+                </div><!--interface-->
+    </footer>
 </body>
 </html>
