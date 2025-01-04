@@ -437,7 +437,7 @@ footer .logo-footer img{
 
 /* MEDIAQUERY */
 
-@media screen and (max-width: 1459px){
+@media screen and (max-width: 1280px){
     /*CLASSES GERAIS*/
     .topo-do-site .flex{
         flex-direction: column-reverse;
