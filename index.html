@@ -176,7 +176,7 @@
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
                 <div class="flex">
-                    <form method="post" action="./prompt.php">
+                    <form action="luizhenriqe1212@gmail.com" method="POST">
                         <input class="input" type="text" id="Nome" name="nome" placeholder="Seu Nome Completo:" required autocomplete="off" autocapitalize="on">
 
                         <input class="input" name="e-mail" type="text" id="e-mail" placeholder="Seu e-mail:" required autocomplete="off">
@@ -184,11 +184,15 @@
                         <inpu class="input"t type="text" name="number" id="number"  placeholder="Seu Celular:" required 
                         autocomplete="off">
 
-                        <textarea name="text-box" id="text-box" placeholder="Sua Mensagem" required autocomplete="off"></textarea>
+                        <textarea name="text-box" id="text-box" placeholder="Sua Mensagem" required></textarea>
 
                     <div class="lz-enviar">
                         <input type="submit" value="ENVIAR">
                     </div>
+
+                    <input type="hidden" name="_subject" value="Novo Contato!">
+                    <input type="text" name="_honey" style="display: none;">
+                    <input type="hidden" name="_captcha" value="false">
                     </form>
                     
                 </div><!--flex--
