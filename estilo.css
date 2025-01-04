@@ -33,7 +33,7 @@ header .interface{
 header ul li a{
     display: inline-block;
     color: rgb(139, 15, 133);
-    font-size: 1.2em;
+    font-weight: 800;
     transition: 0.4s ease;
 }
 header a:hover{
@@ -43,7 +43,7 @@ header a:hover{
 }
 header nav ul li{
     display: inline-block;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 .lz-contato button{
     cursor: pointer;
